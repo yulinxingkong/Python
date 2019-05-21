@@ -1,5 +1,5 @@
 """
-This is a pure python implementation of the quick sort algorithm
+This is a pure(纯) python implementation(实施) of the quick sort algorithm
 
 For doctests run following command:
 python -m doctest -v quick_sort.py
@@ -11,13 +11,13 @@ python quick_sort.py
 """
 from __future__ import print_function
 
-
+# 使用递归(recursive)
 def quick_sort(collection):
     """Pure implementation of quick sort algorithm in Python
 
-    :param collection: some mutable ordered collection with heterogeneous
+    :param collection: some mutable(可变的) ordered collection with heterogeneous(异构性)
     comparable items inside
-    :return: the same collection ordered by ascending
+    :return: the same collection ordered by ascending(升序)
 
     Examples:
     >>> quick_sort([0, 5, 3, 2, 2])

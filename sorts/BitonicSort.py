@@ -1,20 +1,20 @@
-# Python program for Bitonic Sort. Note that this program 
-# works only when size of input is a power of 2. 
+# Python program for Bitonic Sort(比并排序). Note that this program 
+# works only when size of input is a power of 2. (2 的幂)
 
-# The parameter dir indicates the sorting direction, ASCENDING 
-# or DESCENDING; if (a[i] > a[j]) agrees with the direction, 
-# then a[i] and a[j] are interchanged.*/ 
+# The parameter dir indicates(指出,表名) the sorting direction, ASCENDING 
+# or DESCENDING; if (a[i] > a[j]) agrees with the direction(方向), 
+# then a[i] and a[j] are interchanged(交换,互换).*/ 
 def compAndSwap(a, i, j, dire):
     if (dire == 1 and a[i] > a[j]) or (dire == 0 and a[i] < a[j]):
         a[i], a[j] = a[j], a[i]
 
-        # It recursively sorts a bitonic sequence in ascending order,
+        # It recursively sorts a bitonic sequence(序列,顺序) in ascending order,
 
 
 # if dir = 1, and in descending order otherwise (means dir=0).
 # The sequence to be sorted starts at index position low, 
 # the parameter cnt is the number of elements to be sorted. 
-def bitonicMerge(a, low, cnt, dire):
+def bitonicMerge(a, low, cnt, dire):  # 双基反合并算法
     if cnt > 1:
         k = int(cnt / 2)
         for i in range(low, low + k):
@@ -33,7 +33,6 @@ def bitonicSort(a, low, cnt, dire):
         bitonicSort(a, low, k, 1)
         bitonicSort(a, low + k, k, 0)
         bitonicMerge(a, low, cnt, dire)
-
         # Caller of bitonicSort for sorting the entire array of length N
 
 
